@@ -44,6 +44,20 @@ Template.images.events({
     }
   },
 
+  'mouseenter .thumbnail': function (event) {
+    console.log($(event.target).width());
+
+    $(event.target).css("transform", "scale(1.2)");
+
+  },
+
+  'mouseleave .thumbnail': function (event) {
+    console.log($(event.target).width());
+
+    $(event.target).css("transform", "scale(1)");
+
+  },
+
   'click .watches': function (event) {
     Session.set("product", "watch");
   },
