@@ -1,0 +1,64 @@
+<head>
+  <title>shoppee.com</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-sticky navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand text-light">SHOPPEE</a>
+  </nav>
+  <br>
+  <div class="container">
+    {{> buttons}}
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      {{> images}}
+    </div>
+  </div>
+</body>
+
+<template name="images">
+  <br>
+  {{#each images}}
+  <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
+    <div class="card">
+      <img class="card-img-top" src="{{img_src}}" alt="{{img_alt}}" />
+      <div class="card-block">
+        <div class="row">
+          <h5 class="col-6 text-bold">Count:</h5>
+          <h5 class="col-6 text-bold">{{count}}</h5>
+        </div>
+        <div class="row">
+          <h5 class="col-6 text-bold">{{img_name}}</h5>
+          <button class="col-6 buyNow btn btn-success">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</template>
+
+<template name="buttons">
+  <div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-xl-3">
+      <button class="btn btn-warning">
+        <a class="watches ">Watches</a>
+      </button>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-xl-3">
+      <button class="btn btn-danger">
+        <a class="mobiles">Mobiles</a>
+      </button>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-xl-3">
+      <button class="btn btn-success">
+        <a class="laptops">Laptops</a>
+      </button>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-xl-3">
+      <button class="btn btn-info">
+        <a class="tv">TV</a>
+      </button>
+    </div>
+  </div>
+</template>
